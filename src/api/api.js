@@ -23,3 +23,10 @@ export const action = async (prompt) => {
   const response = await sendRequest(url, data);
   return response;
 };
+
+export const critic = async (prompt) => {
+  const url = `${apiUrl}/critic/`;
+  const data = { prompt };
+  const response = await sendRequest(url, data);
+  return response;
+};
